@@ -34,15 +34,15 @@ This project builds a real-time weather analytics solution using **Azure Databri
 
 ## 🔄 Data Flow Overview
 Weather API (REST)
-⬇
+➡️
 Azure Databricks (fetch + flatten)
-⬇
+➡️
 Azure Event Hub (streaming ingestion)
-⬇
+➡️
 Azure Stream Analytics (transform + load)
-⬇
+➡️
 Azure SQL Database (structured storage)
-⬇
+➡️
 Power BI (dashboard)
 
 
