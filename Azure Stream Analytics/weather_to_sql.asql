@@ -1,0 +1,34 @@
+-- ASA Query: From Event Hub to Azure SQL Database
+SELECT
+    System.Timestamp AS EventProcessedUtcTime,
+    eventBody.name,
+    eventBody.region,
+    eventBody.country,
+    eventBody.lat,
+    eventBody.lon,
+    eventBody.localtime,
+    eventBody.temp_c,
+    eventBody.is_day,
+    eventBody.condition_text,
+    eventBody.condition_icon,
+    eventBody.wind_kph,
+    eventBody.wind_degree,
+    eventBody.wind_dir,
+    eventBody.pressure_in,
+    eventBody.precip_in,
+    eventBody.humidity,
+    eventBody.cloud,
+    eventBody.feelslike_c,
+    eventBody.uv,
+    eventBody.air_quality.co,
+    eventBody.air_quality.no2,
+    eventBody.air_quality.o3,
+    eventBody.air_quality.so2,
+    eventBody.air_quality.pm2_5,
+    eventBody.air_quality.pm10,
+    eventBody.air_quality['us-epa-index'],
+    eventBody.air_quality['gb-defra-index']
+INTO
+    WeatherOutput
+FROM
+    EventHubInput
